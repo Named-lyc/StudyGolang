@@ -30,5 +30,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "fetch reading %s :%v\n", url, err)
 		}
 		fmt.Printf("%s", b)
+		//resp.Status 获取状态码
+		fmt.Printf("%s", resp.Status)
 	}
 }
