@@ -5,6 +5,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strings"
 )
 
 // Fetch prints the content found at a URL.
@@ -12,6 +13,11 @@ import (
 func main() {
 
 	for _, url := range os.Args[1:] {
+		//如果输入的url前缀没有http://
+		if !strings.HasPrefix(url, "http://") {
+			// url = "http://"+url
+			url = strings.Join([]string{"http://", url}, "")
+		}
 		resp, err := http.Get(url)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch:%v\n", err)
