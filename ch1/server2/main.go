@@ -24,7 +24,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "URL.Paht = %q\n", r.URL.Path)
 }
 
-//处理程序显示请求次数
+// 处理程序显示请求次数
 func counter(w http.ResponseWriter, r *http.Request) {
 	mu.Lock()
 	fmt.Fprintf(w, "count %d\n", count)
