@@ -1,4 +1,4 @@
-package main
+package Lissajousz
 
 import (
 	"image"
@@ -18,7 +18,7 @@ const (
 	blackIndex = 1 //next color in palette
 )
 
-func main() {
+func lissajousz() {
 	rand.Seed(time.Now().UTC().UnixNano())
 	lissajous(os.Stdin)
 }
