@@ -23,6 +23,7 @@ func add(x, y int) int {
 }
 
 // 如果实参包含引用类型，那么拷贝的将是实参的地址，所以实参会由于函数的间接引用被修改
+// 如 指针，slice，map，chan，function等
 func plus(x *int) int {
 	m := *x
 	m += 1
