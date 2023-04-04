@@ -33,3 +33,5 @@ func main() {
 	//fmt.Println(c == f) !! compile error : type mismatch
 	fmt.Println(c == FToC(f))
 }
+
+// == < 可以用来比较一个命名类型的变量和同类型的变量，或者和有着相同底层类型的未命名类型的值之间的比较
